@@ -1,0 +1,393 @@
+/* ==================== Contenedor principal ==================== */
+
+body{
+  display:flex;
+  justify-content:center;
+  font-size:19px;
+  font-family:system-ui,sans-serif;
+  background:#ede4da;
+  margin:0;
+  padding:0;
+}
+
+#pedidoForm{
+  max-width:600px;
+  width:100%;
+  margin:0 auto;
+  padding:20px;
+  background-color:#ffffff;
+  border-radius:12px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.12);
+  box-sizing:border-box;
+  overflow-x:hidden;
+  position:relative;
+  z-index:1;
+}
+
+/* ==================== TITULO ==================== */
+
+#pedidoForm h1{
+  font-weight:700;
+  font-size:28px;
+  text-align:center;
+  margin:5px 0 12px 0;
+  color:#333;
+  position:relative;
+}
+
+#pedidoForm h1::after{
+  content:"";
+  display:block;
+  width:70%;
+  height:4px;
+  background:#7a1f1f;
+  margin:8px auto 0 auto;
+  border-radius:3px;
+}
+
+/* ==================== SECCIONES ==================== */
+
+.menu-section{
+  background:#ffffff;
+  border-radius:15px;
+  padding:15px;
+  margin:10px auto;
+  max-width:800px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.menu-section h2{
+  background: #000000;
+  color:white;
+  padding:12px;
+  border-radius:10px;
+  font-size:22px;
+  text-align:center;
+  margin:0;
+}
+
+/* ==================== SUBCATEGORIAS ==================== */
+
+.menu-section h3{
+  font-size:18px;
+  text-align:center;
+  margin-top:15px;
+  margin-bottom:10px;
+  color:#444;
+}
+
+/* ==================== ITEMS ==================== */
+
+.item{
+  display:flex;
+  flex-direction:column;
+  padding:8px 5px;
+  border-bottom:1px dashed #d7c7b8;
+  gap:4px;
+}
+
+.item label{
+  font-weight:normal;
+  flex:1 1 auto;
+  font-size:19px;
+}
+
+.item span{
+  color:#7a1f1f;
+  margin:0 8px;
+  white-space:nowrap;
+  font-weight:bold;
+}
+
+.item input[type="number"]{
+  width:60px;
+  padding:4px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* ==================== LINEA ITEM ==================== */
+
+.item-linea{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:0.5rem;
+}
+
+.item-linea label{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  flex:1;
+}
+
+.item-linea span{
+  flex:0;
+  text-align:center;
+  width:80px;
+}
+
+.item-linea input.cantidad{
+  flex:0;
+  width:60px;
+  text-align:center;
+}
+
+/* ==================== DESCRIPCIONES ==================== */
+
+.descripcion{
+  width:100%;
+  font-size:0.9rem;
+  color:#555;
+  margin-top:4px;
+}
+
+/* ==================== BOTON ==================== */
+
+.btn{
+  width:100%;
+  padding:13px;
+  background-color:#7a1f1f;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font-size:17px;
+  cursor:pointer;
+  margin-top:15px;
+  transition:0.2s;
+}
+
+.btn:hover{
+  background-color:#641717;
+}
+
+/* ==================== FORMULARIOS ==================== */
+
+.form-group{
+  margin-bottom:15px;
+  display:flex;
+  flex-direction:column;
+}
+
+.form-group label{
+  margin-bottom:5px;
+  font-weight:bold;
+}
+
+/* INPUTS */
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:2px solid #ccc;
+  font-size:14px;
+  box-sizing:border-box;
+}
+
+/* ==================== SELECT ==================== */
+
+#tipoEntrega,
+#tipoPago{
+  width:100%;
+  padding:10px 12px;
+  font-size:16px;
+  border:2px solid #ccc;
+  border-radius:8px;
+  background-color:#fff;
+  cursor:pointer;
+}
+
+#tipoEntrega:focus,
+#tipoPago:focus{
+  border-color:#7a1f1f;
+  outline:none;
+}
+
+/* ==================== INPUTS ESPECIALES ==================== */
+
+#direccion{
+  width:80%;
+  padding:12px 15px;
+  font-size:15px;
+  border-radius:17px;
+}
+
+#efectivoCliente{
+  width:100%;
+  padding:12px 15px;
+  font-size:15px;
+  border-radius:17px;
+}
+
+/* ==================== PORTADA ==================== */
+
+.portada{
+  width:100%;
+  margin-bottom:15px;
+}
+
+.portada img{
+  width:100%;
+  max-width: 100%;
+  height: auto;
+  border-radius:12px;
+  display:block;
+}
+
+/* ==================== PAGINA GRACIAS ==================== */
+
+.gracias-container{
+  max-width:550px;
+  width:95%;
+  margin:20px auto;
+  padding:20px;
+  background-color:#fff;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gracias{
+  text-align:center;
+  padding:40px 20px;
+}
+
+.gracias p{
+  font-size:16px;
+}
+
+/* ==================== CHECKBOX ==================== */
+
+.check-datos{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:normal;
+  margin-top:18px;
+}
+
+#confirmPedido{
+  transform:scale(1.2);
+  width:auto;
+  margin:0;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width:600px){
+
+#pedidoForm{
+  width:95%;
+  padding:15px;
+}
+
+.item input[type="number"]{
+  width:50px;
+}
+
+.item label{
+  font-size:17px;
+}
+
+}
+
+@media (max-width:480px){
+
+.item{
+  font-size:14px;
+}
+
+}
+
+@media (min-width:768px){
+
+#pedidoForm{
+  margin:40px auto;
+}
+
+}
+
+.detalles-cliente h2{
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+/* SELECTOR PROTEINA */
+
+select{
+padding:6px 10px;
+font-size:14px;
+border:2px solid #ddd;
+border-radius:8px;
+background-color:#fff;
+color:#333;
+cursor:pointer;
+transition:0.2s;
+}
+
+/* efecto cuando pasan el mouse */
+
+select:hover{
+border-color:#7a1f1f;
+}
+
+/* cuando lo seleccionan */
+
+select:focus{
+border-color:#7a1f1f;
+outline:none;
+box-shadow:0 0 4px rgba(122,31,31,0.3);
+}
+
+.proteina{
+max-width:110px;
+}
+
+@media (max-width:600px){
+  .item-linea{
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.item-linea label{
+flex:1;
+min-width:0;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.proteina{
+width:85px;
+}
+
+.item-linea span{
+min-width:65px;
+text-align:right;
+}
+
+.item-linea .cantidad{
+width:50px;
+}
+}
+
+.proteina{
+width:85px;
+}
+
+@media (max-width:600px){
+
+.proteina{
+width:75px;
+font-size:13px;
+}
+
+}
