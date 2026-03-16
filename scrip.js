@@ -327,7 +327,7 @@ mensaje+="💰 Total: "+totalTexto;
 
 
 // WHATSAPP
-const numero="573150765988";
+const numero="573223101369";
 
 const url=
 "https://api.whatsapp.com/send?phone="+
