@@ -391,3 +391,35 @@ font-size:13px;
 }
 
 }
+
+.proteina{
+width:80px;
+min-width:60px;
+flex-shrink:1;
+}
+
+.item-linea span{
+min-width:60px;
+}
+
+.item-linea .cantidad{
+width:45px;
+}
+
+@media (max-width:370px){
+
+.proteina{
+width:65px;
+font-size:12px;
+}
+
+.item-linea span{
+min-width:55px;
+font-size:13px;
+}
+
+.item-linea .cantidad{
+width:40px;
+}
+
+}
