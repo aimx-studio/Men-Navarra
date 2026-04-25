@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Navarra</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <form id="pedidoForm">
+
+      <div class="container">
+        <div class="portada"><img src="portadanavarra.jpg" alt="portada del menu"></div>
+    </div>
+
+    <h1>Menu Navarra</h1>
+
+    <section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Entradas</span></h2>
+
+<div class="platos" >
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="Nuggets de Pollo"
+value="Nuggets de Pollo"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Nuggets de Pollo
+</label>
+
+<span>$22.000</span>
+
+<input type="number" class="cantidad"
+name="NuggetsPolloCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Seis unidades, papa a la francesa y salsa de la casa.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="Porcion de Chicharron"
+value="Porción de Chicharrón"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Porción de Chicharrón
+</label>
+
+<span>$25.000</span>
+
+<input type="number" class="cantidad"
+name="ChicharronCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+250 gramos de chicharrón carnudo, rapiyuca y limón.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="Vallunas"
+value="Vallunas"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Vallunas
+</label>
+
+<span>$14.000</span>
+
+<input type="number" class="cantidad"
+name="VallunasCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Seis unidades de mini vallunas, salsa tártara.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Hamburguesas</span></h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="LaClasica"
+value="La Clásica"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+La Clásica
+</label>
+
+<select class="sabor">
+<option value="">Elige</option>
+<option value="Pollo">Pollo</option>
+<option value="Carne">Carne</option>
+<option value="Cerdo">Cerdo</option>
+</select>
+
+<span>$22.000</span>
+
+<input type="number" class="cantidad"
+name="ClasicaCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Croqueta de pollo, carne o cerdo, tocineta, queso, vegetales y porción de papas a la francesa.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="LaDoble"
+value="La Doble"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+La Doble
+</label>
+
+<span>$27.000</span>
+
+<input type="number" class="cantidad"
+name="DobleCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Doble croqueta de carne, queso americano, queso doble crema, tocineta, mermelada de pimentón, vegetales y porción de papas a la francesa.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="HamburguesaNavarra"
+value="Navarra"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Navarra
+</label>
+
+<span>$30.000</span>
+
+<input type="number" class="cantidad"
+name="NavarraCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Croqueta de carne, pechuga apanada o a la plancha, queso americano, queso doble crema, tocineta, vegetales y porción de papas a la francesa.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Salchixx</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="PolludaPersonal"
+value="La Polluda Personal"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+La Polluda Personal
+</label>
+
+<span>$22.000</span>
+
+<input type="number" class="cantidad"
+name="PolludaPersonalCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Base de papa francesa, salchicha zenú americana, pollo desmechado, queso derretido y guacamole.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="PolludaParaDos"
+value="La Polluda Para Dos"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+La Polluda Para Dos
+</label>
+
+<span>$38.000</span>
+
+<input type="number" class="cantidad"
+name="PolludaDosCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+<div class="descripcion" style="display:none;">
+Base de papa francesa, salchicha zenú americana, pollo desmechado, queso derretido y guacamole.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Perros Calientes</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="PerroSencillo"
+value="Perro Sencillo"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+El Sencillo
+</label>
+
+<span>$17.000</span>
+
+<input type="number" class="cantidad"
+name="PerroSencilloCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Salchicha zenú americana, queso, papa ripio, salsas y porción de papas a la francesa.
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+  <input type="checkbox" class="check-plato"
+name="PerroEspecial"
+value="Perro Especial"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Perro
+</label>
+
+<select class="sabor proteína">
+<option value="">Elige</option>
+<option value="Pollo desmechado">Pollo</option>
+<option value="Carne desmechada">Carne</option>
+</select>
+
+<span>$24.000</span>
+
+<input type="number" class="cantidad"
+name="PerroEspecialCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Proteina a eleccion, salchicha zenú americana, queso, papa ripio, salsa, porcion de papas a la francesa.
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="PerroNavarra"
+value="Perro Navarra"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Navarra
+</label>
+
+<span>$28.000</span>
+
+<input type="number" class="cantidad"
+name="PerroNavarraCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Pollo y carne desmechado, salchicha zenú americana, queso, papa ripio, salsa y porción de papas a la francesa.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Maicitos</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="MaicitosPollo"
+value="Maicitos Pollo"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Pollo
+</label>
+
+<span>$22.000</span>
+
+<input type="number" class="cantidad"
+name="MaicitosPolloCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Maicitos acompañados de porción de papas a la francesa.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="MaicitosCarne"
+value="Maicitos Carne"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Carne
+</label>
+
+<span>$27.000</span>
+
+<input type="number" class="cantidad"
+name="MaicitosCarneCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Maicitos acompañados de porción de papas a la francesa.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Sandwichs</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="SandwichClasico"
+value="Sandwich Clasico"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Sándwich Clásico
+</label>
+
+<span>$18.000</span>
+
+<input type="number" class="cantidad"
+name="SandwichClasicoCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Jamón de pavo, queso, tomate, lechuga, aderezo de la casa y porción de papas a la francesa.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="SandwichPollo"
+value="Sandwich de Pollo"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Sandwich de Pollo
+</label>
+
+<span>$22.000</span>
+
+<input type="number" class="cantidad"
+name="SandwichPolloCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Pollo desmechado, queso, jamón de pavo, lechuga, tomate, aderezo de la casa y porción de papas a la francesa.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="SandwichCarne"
+value="Sandwich de Carne"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Sandwich de Carne
+</label>
+
+<span>$24.000</span>
+
+<input type="number" class="cantidad"
+name="SandwichCarneCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Carne desmechada, queso, jamón de pavo, lechuga, tomate, aderezo de la casa y porción de papas a la francesa.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="SandwichNavarra"
+value="Sandwich Navarra"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Sandwich Navarra
+</label>
+
+<span>$28.000</span>
+
+<input type="number" class="cantidad"
+name="SandwichNavarraCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Carne y pollo desmechado, queso, jamón de pavo, lechuga, tomate, aderezo de la casa y porción de papas a la francesa.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Carnes</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="AsadoMixto"
+value="Asado Mixto"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Asado Mixto
+</label>
+
+<span>$40.000</span>
+
+<input type="number" class="cantidad"
+name="AsadoMixtoCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Carne, pollo, cerdo a la plancha, chorizo ternera, porción de papas a la francesa y ensalada criolla.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="CarnePlancha"
+value="Carne a la Plancha"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Carne a la Plancha
+</label>
+
+<span>$32.000</span>
+
+<input type="number" class="cantidad"
+name="CarnePlanchaCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Acompañado de porción de papas a la francesa y ensalada criolla.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="PechugaPlancha"
+value="Pechuga a la Plancha"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Pechuga a la Plancha
+</label>
+
+<span>$30.000</span>
+
+<input type="number" class="cantidad"
+name="PechugaPlanchaCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="LomoCerdo"
+value="Lomo de Cerdo"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Lomo de Cerdo
+</label>
+
+<span>$30.000</span>
+
+<input type="number" class="cantidad"
+name="LomoCerdoCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+    <h2 onclick="toggleMenu(this)"><span> Bar</span></h2>
+
+<div class="platos" style="display:none;">
+
+<h3>Cócteles de Autor</h3>
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="DulcePecado"
+value="Dulce Pecado"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Dulce Pecado
+</label>
+
+<span>$25.000</span>
+
+<input type="number" class="cantidad"
+name="DulcePecadoCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Whisky, maracuyá, crema de coco, triple sec y limón.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="PerroNegro"
+value="Perro Negro"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Perro Negro
+</label>
+
+<span>$25.000</span>
+
+<input type="number" class="cantidad"
+name="PerroNegroCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Tequila, ron, jamaica, frutos amarillos, ají dulce y limón.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="Saoco"
+value="Saoco"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Saoco
+</label>
+
+<span>$25.000</span>
+
+<input type="number" class="cantidad"
+name="SaocoCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Ron blanco, ron oscuro, frutos rojos, frutos amarillos, triple sec, limón y chamoy.
+</div>
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Peceras</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="Pecera"
+value="Pecera"
+onchange="toggleCantidad(this); toggleDescripcion(this); calcularTotal()">
+Pecera
+</label>
+
+<select class="sabor" onchange="calcularTotal()">
+<option value="">Elige</option>
+<option value="50000">$50.000</option>
+<option value="80000">$80.000</option>
+</select>
+
+<span>$50-80K</span>
+
+<input type="number" class="cantidad"
+name="PeceraCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Cóctel para compartir preparado con mezcla de licores y frutas.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="PeceraMarilyn"
+value="Pecera Marilyn Monroe"
+onchange="toggleCantidad(this); toggleDescripcion(this); calcularTotal()">
+Marilyn Monroe
+</label>
+
+<select class="sabor" onchange="calcularTotal()">
+<option value="">Elige</option>
+<option value="50000">$50.000</option>
+<option value="80000">$80.000</option>
+</select>
+
+<span>$50-80K</span>
+
+<input type="number" class="cantidad"
+name="PeceraMarilynCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Tequila, vodka, ron blanco, ginebra, frutos rojos, naranja, limón, chamoy y Canadá Dry.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="Pecera47"
+value="Pecera La 47"
+onchange="toggleCantidad(this); toggleDescripcion(this); calcularTotal()">
+La 47
+</label>
+
+<select class="sabor" onchange="calcularTotal()">
+<option value="">Elige</option>
+<option value="50000">$50.000</option>
+<option value="80000">$80.000</option>
+</select>
+
+<span>$50-80K</span>
+
+<input type="number" class="cantidad"
+name="Pecera47Cantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Tequila, vodka, ron blanco, ron oscuro, whisky, jamaica, maracuyá y ají dulce.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Vinos</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+
+<label>
+<input type="checkbox" class="check-plato"
+name="JarraSangria"
+value="Jarra de Sangria"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Jarra de Sangría
+</label>
+
+<span>$70.000</span>
+
+<input type="number" class="cantidad"
+name="JarraSangriaCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+
+</div>
+
+<div class="descripcion" style="display:none;">
+Vino tinto, ginebra, limón, mix de frutas, naranja y Canadá Dry.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="CopaSangria"
+value="Copa Sangria"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Copa Sangría
+</label>
+
+<span>$22.000</span>
+
+<input type="number" class="cantidad"
+name="CopaSangriaCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Vino tinto, limón, mix de frutas, naranja y Canadá Dry.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="TintoVerano"
+value="Tinto Verano"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Tinto Verano
+</label>
+
+<span>$22.000</span>
+
+<input type="number" class="cantidad"
+name="TintoVeranoCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Vino tinto, naranja, limón y Canadá Dry.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Vodka</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="SexOnTheBeach"
+value="Sex on the Beach"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Sex on the Beach
+</label>
+
+<span>$18.000</span>
+
+<input type="number" class="cantidad"
+name="SexOnTheBeachCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Vodka, maracuyá, naranja y granadina.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="MoscowMule"
+value="Moscow Mule"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Moscow Mule
+</label>
+
+<span>$18.000</span>
+
+<input type="number" class="cantidad"
+name="MoscowMuleCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Vodka, jengibre, limón y menta.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="Destornillador"
+value="Destornillador"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Destornillador
+</label>
+
+<span>$18.000</span>
+
+<input type="number" class="cantidad"
+name="DestornilladorCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Vodka y naranja.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span> Ron</span></h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="PinaColada"
+value="Piña Colada"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Piña Colada
+</label>
+
+<span>$20.000</span>
+
+<input type="number" class="cantidad"
+name="PinaColadaCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Ron, crema de coco y piña.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="MojitoFrutosRojos"
+value="Mojito Frutos Rojos"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Mojito (Frutos Rojos)
+</label>
+
+<span>$18.000</span>
+
+<input type="number" class="cantidad"
+name="MojitoFrutosRojosCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Ron, hierbabuena, limón y soda.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="CubaLibre"
+value="Cuba Libre"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Cuba Libre
+</label>
+
+<span>$20.000</span>
+
+<input type="number" class="cantidad"
+name="CubaLibreCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Ron, Coca-Cola, amargo de angostura y limón.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2 onclick="toggleMenu(this)"><span>Ginebra</span></h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="GinTonic"
+value="Gin and Tonic"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Gin and Tonic
+</label>
+
+<span>$18.000</span>
+
+<input type="number" class="cantidad"
+name="GinTonicCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Agua tónica con notas cítricas.
+</div>
+</div>
+
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato"
+name="TomCollins"
+value="Tom Collins"
+onchange="toggleCantidad(this); toggleDescripcion(this)">
+Tom Collins
+</label>
+
+<span>$18.000</span>
+
+<input type="number" class="cantidad"
+name="TomCollinsCantidad"
+value="0" min="0"
+onchange="calcularTotal()">
+</div>
+
+<div class="descripcion" style="display:none;">
+Gin con jamaica.
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Licores</span></h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="BuchanansMaster" value="Buchanans Master" onchange="toggleCantidad(this)">Buchanans Master</label><span>$300.000</span><input type="number" class="cantidad" name="BuchanansMasterCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="BuchanansDeluxe" value="Buchanans Deluxe" onchange="toggleCantidad(this)">Buchanans Deluxe</label><span>$250.000</span><input type="number" class="cantidad" name="BuchanansDeluxeCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="OldParr" value="Old Parr" onchange="toggleCantidad(this)">Old Parr</label><span>$250.000</span><input type="number" class="cantidad" name="OldParrCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="JackHoney" value="Jack Daniels Honey" onchange="toggleCantidad(this)">Jack Daniels Honey</label><span>$230.000</span><input type="number" class="cantidad" name="JackHoneyCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="JackTennessee" value="Jack Daniels Tenesse" onchange="toggleCantidad(this)">Jack Daniels Tenesse</label><span>$230.000</span><input type="number" class="cantidad" name="JackTennesseeCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="DonJulio70" value="Don Julio 70 Años" onchange="toggleCantidad(this)">Don Julio 70 Años</label><span>$400.000</span><input type="number" class="cantidad" name="DonJulio70Cantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="DonJulioBlanco" value="Don Julio Blanco" onchange="toggleCantidad(this)">Don Julio Blanco</label><span>$350.000</span><input type="number" class="cantidad" name="DonJulioBlancoCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="JimadorBlanco" value="Jimador Blanco" onchange="toggleCantidad(this)">Jimador Blanco</label><span>$230.000</span><input type="number" class="cantidad" name="JimadorBlancoCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="JimadorReposado" value="Jimador Reposado" onchange="toggleCantidad(this)">Jimador Reposado</label><span>$230.000</span><input type="number" class="cantidad" name="JimadorReposadoCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+</div>
+</section>
+
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Cervezas</span></h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="StellaArtois" value="Stella Artois" onchange="toggleCantidad(this)">Stella Artois</label><span>$10.000</span><input type="number" class="cantidad" name="StellaArtoisCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="Corona" value="Corona" onchange="toggleCantidad(this)">Corona</label><span>$10.000</span><input type="number" class="cantidad" name="CoronaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="Coronita" value="Coronita" onchange="toggleCantidad(this)">Coronita</label><span>$8.000</span><input type="number" class="cantidad" name="CoronitaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="Heineken" value="Heineken" onchange="toggleCantidad(this)">Heineken</label><span>$7.000</span><input type="number" class="cantidad" name="HeinekenCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="Budweiser" value="Budweiser" onchange="toggleCantidad(this)">Budweiser</label><span>$7.000</span><input type="number" class="cantidad" name="BudweiserCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="ClubColombia" value="Club Colombia" onchange="toggleCantidad(this)">Club Colombia</label><span>$7.000</span><input type="number" class="cantidad" name="ClubColombiaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="Poker" value="Poker" onchange="toggleCantidad(this)">Poker</label><span>$6.000</span><input type="number" class="cantidad" name="PokerCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="Aguila" value="Aguila" onchange="toggleCantidad(this)">Aguila</label><span>$6.000</span><input type="number" class="cantidad" name="AguilaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="Andina" value="Andina" onchange="toggleCantidad(this)">Andina</label><span>$6.000</span><input type="number" class="cantidad" name="AndinaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+</div>
+</section>
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Shots</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato" name="ShotTequila" value="Shot de Tequila" onchange="toggleCantidad(this)">
+Shot de Tequila
+</label>
+<span>$8.000</span>
+<input type="number" class="cantidad" name="ShotTequilaCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato" name="ShotJagger" value="Shot de Jagger" onchange="toggleCantidad(this)">
+Shot de Jagger
+</label>
+<span>$10.000</span>
+<input type="number" class="cantidad" name="ShotJaggerCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato" name="ShotFireball" value="Shot Fireball" onchange="toggleCantidad(this)">
+Shot Fireball
+</label>
+<span>$9.000</span>
+<input type="number" class="cantidad" name="ShotFireballCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Micheladas</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato" name="MicheladaClasica" value="Michelada Clasica" onchange="toggleCantidad(this); toggleDescripcion(this)">
+Michelada Clásica
+</label>
+<span>$12.000</span>
+<input type="number" class="cantidad" name="MicheladaClasicaCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+<div class="descripcion" style="display:none;">
+Cerveza, limón, sal y salsas especiales.
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato" name="MicheladaEspecial" value="Michelada Especial" onchange="toggleCantidad(this); toggleDescripcion(this)">
+Michelada Especial
+</label>
+<span>$15.000</span>
+<input type="number" class="cantidad" name="MicheladaEspecialCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+<div class="descripcion" style="display:none;">
+Cerveza, limón, salsas, especias y toque de picante.
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Cafetería</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato" name="CafeAmericano" value="Cafe Americano" onchange="toggleCantidad(this)">
+Café Americano
+</label>
+<span>$4.000</span>
+<input type="number" class="cantidad" name="CafeAmericanoCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato" name="CafeLatte" value="Cafe Latte" onchange="toggleCantidad(this)">
+Café Latte
+</label>
+<span>$5.000</span>
+<input type="number" class="cantidad" name="CafeLatteCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+<label>
+<input type="checkbox" class="check-plato" name="Capuccino" value="Capuccino" onchange="toggleCantidad(this)">
+Capuccino
+</label>
+<span>$5.000</span>
+<input type="number" class="cantidad" name="CapuccinoCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Aromáticas</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item">
+<div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="AromaticaFrutosRojos" value="Aromática Frutos Rojos" onchange="toggleCantidad(this)">Frutos rojos</label>
+<span>$8.000</span>
+<input type="number" class="cantidad" name="AromaticaFrutosRojosCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="AromaticaFrutosAmarillos" value="Aromática Frutos Amarillos" onchange="toggleCantidad(this)">Frutos amarillos</label>
+<span>$8.000</span>
+<input type="number" class="cantidad" name="AromaticaFrutosAmarillosCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="AromaticaFrutosVerdes" value="Aromática Frutos Verdes" onchange="toggleCantidad(this)">Frutos verdes</label>
+<span>$8.000</span>
+<input type="number" class="cantidad" name="AromaticaFrutosVerdesCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="JamaicaJengibre" value="Jamaica y Jengibre" onchange="toggleCantidad(this)">Jamaica y jengibre</label>
+<span>$8.000</span>
+<input type="number" class="cantidad" name="JamaicaJengibreCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+<div class="item">
+<div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="TeLimon" value="Té de Limón" onchange="toggleCantidad(this)">Té de limón</label>
+<span>$8.000</span>
+<input type="number" class="cantidad" name="TeLimonCantidad" value="0" min="0" onchange="calcularTotal()">
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span> Frappes</span></h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="FrappeCoco" value="Frappe Coco" onchange="toggleCantidad(this)">Coco</label><span>$14.000</span><input type="number" class="cantidad" name="FrappeCocoCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="FrappeCerezada" value="Frappe Cerezada" onchange="toggleCantidad(this)">Cerezada</label><span>$14.000</span><input type="number" class="cantidad" name="FrappeCerezadaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="FrappeHierbabuena" value="Frappe Hierbabuena" onchange="toggleCantidad(this)">Hierbabuena</label><span>$12.000</span><input type="number" class="cantidad" name="FrappeHierbabuenaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="FrappeMaracuya" value="Frappe Maracuyá" onchange="toggleCantidad(this)">Maracuyá</label><span>$12.000</span><input type="number" class="cantidad" name="FrappeMaracuyaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="FrappeNaranja" value="Frappe Naranja" onchange="toggleCantidad(this)">Naranja</label><span>$12.000</span><input type="number" class="cantidad" name="FrappeNaranjaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="FrappeLimon" value="Frappe Limón" onchange="toggleCantidad(this)">Limón</label><span>$12.000</span><input type="number" class="cantidad" name="FrappeLimonCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="FrappeFresa" value="Frappe Fresa" onchange="toggleCantidad(this)">Fresa</label><span>$12.000</span><input type="number" class="cantidad" name="FrappeFresaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="FrappeMora" value="Frappe Mora" onchange="toggleCantidad(this)">Mora</label><span>$12.000</span><input type="number" class="cantidad" name="FrappeMoraCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="FrappeGuanabana" value="Frappe Guanábana" onchange="toggleCantidad(this)">Guanábana</label><span>$12.000</span><input type="number" class="cantidad" name="FrappeGuanabanaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+</div>
+</section>
+
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Malteadas</span></h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="MalteadaMM" value="Malteada M&M's" onchange="toggleCantidad(this)">M&M's</label><span>$18.000</span><input type="number" class="cantidad" name="MalteadaMMCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="MalteadaMilo" value="Malteada Milo" onchange="toggleCantidad(this)">Milo</label><span>$15.000</span><input type="number" class="cantidad" name="MalteadaMiloCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="MalteadaChocolate" value="Malteada Chocolate" onchange="toggleCantidad(this)">Chocolate</label><span>$15.000</span><input type="number" class="cantidad" name="MalteadaChocolateCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="MalteadaCocosette" value="Malteada Cocosette" onchange="toggleCantidad(this)">Cocosette</label><span>$15.000</span><input type="number" class="cantidad" name="MalteadaCocosetteCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="MalteadaOreo" value="Malteada Oreo" onchange="toggleCantidad(this)">Oreo</label><span>$15.000</span><input type="number" class="cantidad" name="MalteadaOreoCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+</div>
+</section>
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Sodas Italianas</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="SodaFrutosRojos" value="Soda Frutos Rojos" onchange="toggleCantidad(this)">Frutos rojos</label>
+<span>$15.000</span>
+<input type="number" class="cantidad" name="SodaFrutosRojosCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="SodaFrutosAmarillos" value="Soda Frutos Amarillos" onchange="toggleCantidad(this)">Frutos amarillos</label>
+<span>$15.000</span>
+<input type="number" class="cantidad" name="SodaFrutosAmarillosCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="SodaFrutosVerdes" value="Soda Frutos Verdes" onchange="toggleCantidad(this)">Frutos verdes</label>
+<span>$15.000</span>
+<input type="number" class="cantidad" name="SodaFrutosVerdesCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="SodaCerezaLimon" value="Soda Cereza Limón" onchange="toggleCantidad(this)">Cereza - limón</label>
+<span>$13.000</span>
+<input type="number" class="cantidad" name="SodaCerezaLimonCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="SodaLimon" value="Soda Limón" onchange="toggleCantidad(this)">Limón</label>
+<span>$10.000</span>
+<input type="number" class="cantidad" name="SodaLimonCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+</div>
+</section>
+
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Repostería</span> </h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="CrepeSalado" value="Crepe Salado" onchange="toggleCantidad(this)">Crepes Salado (Pollo, Carne)</label>
+<span>$22.000</span>
+<input type="number" class="cantidad" name="CrepeSaladoCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="CrepeDulce" value="Crepe Dulce" onchange="toggleCantidad(this)">Crepes Dulce (Helado, Fresa, Chocolate)</label>
+<span>$18.000</span>
+<input type="number" class="cantidad" name="CrepeDulceCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="BrownieHelado" value="Brownie con Helado" onchange="toggleCantidad(this)">Brownie con helado</label>
+<span>$15.000</span>
+<input type="number" class="cantidad" name="BrownieHeladoCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="TortaRedVelvet" value="Torta Red Velvet" onchange="toggleCantidad(this)">Torta Red Velvet</label>
+<span>$12.000</span>
+<input type="number" class="cantidad" name="TortaRedVelvetCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="TortaChocolate" value="Torta Chocolate" onchange="toggleCantidad(this)">Torta de Chocolate</label>
+<span>$12.000</span>
+<input type="number" class="cantidad" name="TortaChocolateCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+</div>
+</section>
+
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Bebidas</span></h2>
+
+<div class="platos" style="display:none;">
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="CheladaCola" value="Chelada de Cola" onchange="toggleCantidad(this)">Chelada de cola</label>
+<span>$12.000</span>
+<input type="number" class="cantidad" name="CheladaColaCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="CocaCola400" value="Coca Cola 400ml" onchange="toggleCantidad(this)">Coca-Cola 400 ml</label>
+<span>$5.000</span>
+<input type="number" class="cantidad" name="CocaCola400Cantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="Quatro400" value="Quatro 400ml" onchange="toggleCantidad(this)">Quatro 400 ml</label>
+<span>$5.000</span>
+<input type="number" class="cantidad" name="Quatro400Cantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="Agua" value="Agua" onchange="toggleCantidad(this)">Agua</label>
+<span>$4.000</span>
+<input type="number" class="cantidad" name="AguaCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="SodaBretana" value="Soda Bretaña" onchange="toggleCantidad(this)">Soda Bretaña</label>
+<span>$5.000</span>
+<input type="number" class="cantidad" name="SodaBretanaCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="JugoHit" value="Jugo Hit" onchange="toggleCantidad(this)">Jugo Hit</label>
+<span>$5.000</span>
+<input type="number" class="cantidad" name="JugoHitCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="Hidrolite" value="Hidrolite" onchange="toggleCantidad(this)">Hidrolite</label>
+<span>$7.000</span>
+<input type="number" class="cantidad" name="HidroliteCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="GaseosaLitro" value="Gaseosa Litro" onchange="toggleCantidad(this)">Gaseosa litro</label>
+<span>$14.000</span>
+<input type="number" class="cantidad" name="GaseosaLitroCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+<div class="item"><div class="item-linea">
+<label><input type="checkbox" class="check-plato" name="Gaseosa3L" value="Gaseosa 3L" onchange="toggleCantidad(this)">Gaseosa 3 litros</label>
+<span>$20.000</span>
+<input type="number" class="cantidad" name="Gaseosa3LCantidad" value="0" min="0" onchange="calcularTotal()">
+</div></div>
+
+</div>
+</section>
+
+<section class="menu-section">
+<h2 onclick="toggleMenu(this)"><span>Arte y Brunch</span></h2>
+
+<div class="platos" style="display:none;">
+
+<h3>Combos</h3>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="ComboVanGogh" value="Combo Van Gogh" onchange="toggleCantidad(this)">Combo Van Gogh</label><span>$50.000</span><input type="number" class="cantidad" name="ComboVanGoghCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="ComboBoccioni" value="Combo Boccioni" onchange="toggleCantidad(this)">Combo Boccioni</label><span>$50.000</span><input type="number" class="cantidad" name="ComboBoccioniCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="ComboMonalissa" value="Combo Monalissa" onchange="toggleCantidad(this)">Combo Monalissa</label><span>$40.000</span><input type="number" class="cantidad" name="ComboMonalissaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="ArteInfantil" value="Arte Infantil" onchange="toggleCantidad(this)">Arte infantil</label><span>$40.000</span><input type="number" class="cantidad" name="ArteInfantilCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<h3>Cerámica</h3>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="CeramicaGrande" value="Cerámica Grande" onchange="toggleCantidad(this)">Cerámica grande</label><span>$30.000</span><input type="number" class="cantidad" name="CeramicaGrandeCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+
+<div class="item"><div class="item-linea"><label><input type="checkbox" class="check-plato" name="CeramicaPequena" value="Cerámica Pequeña" onchange="toggleCantidad(this)">Cerámica pequeña</label><span>$25.000</span><input type="number" class="cantidad" name="CeramicaPequenaCantidad" value="0" min="0" onchange="calcularTotal()"></div></div>
+</div>
+</section>
+
+<!-- ====== FORMULARIO ======== -->
+<form id="pedidoForm">
+  <section class="detalles-cliente">
+    <h2>📝 Detalles del Cliente</h2>
+
+    <div class="form-group">
+      <label for="nombre">👤 Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">📞 Número de WhatsApp:</label>
+      <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 3001234567">
+    </div>
+
+    <div class="form-group">
+      <label for="tipoEntrega">📦 Tipo de entrega:</label>
+      <select id="tipoEntrega" name="tipoEntrega" required>
+        <option value="">-- Selecciona --</option>
+        <option value="Recoger en el local">Recoger en el local</option>
+        <option value="A domicilio">A domicilio</option>
+        <option value="Comer dentro del local">Comer dentro del local</option>
+      </select>
+    </div>
+
+    <!-- Campo de dirección oculto inicialmente -->
+    <div class="form-group" id="direccionField" style="display:none;">
+        <p id="costoDomicilio"
+        style="display: none; color: rgb(245, 63, 63);
+        font-weight: bold; margin-bottom: 8px;">
+        ⚠️ El costo se hablara por WhatsApp</p>
+        
+      <label for="direccion">📍 Dirección:</label>
+      <input type="text" id="direccion" name="direccion" placeholder="Escribe tu dirección">
+    </div>
+
+    <div class="form-group">
+  <label for="tipoPago">💰 Tipo de pago:</label>
+  <select id="tipoPago" name="tipoPago" required>
+    <option value="">-- Selecciona --</option>
+    <option value="Efectivo">Efectivo</option>
+    <option value="Nequi">Nequi</option>
+  </select>
+</div>
+
+<!-- Campo "Con cuánto pagará" oculto inicialmente -->
+<div class="form-group" id="efectivoField" style="display:none;">
+  <label for="efectivoMonto">💵 Con cuánto pagará:</label>
+  <small>Esto ayuda a preparar el cambio correcto 🙏</small>
+  <input type="number" id="efectivoCliente" name="efectivoMonto" class="efectivoCliente" placeholder="Ej: 50.000">
+</div>
+
+<!-- Información dinámica de pagos -->
+<div class="form-group" id="infoPago" style="display:none;">
+
+  <div id="infoNequi" class="info-transferencia" style="display:none;">
+    <p><strong>📱 Nequi</strong></p>
+    <p><strong>3223101319</strong></p>
+    
+    <small>⚠️ POR FAVOR ENVIAR EL PANTALLAZO DE LA TRANSFERENCIA JUSTO EN EL MOMENTO QUE SEA EFECTUADA POR WHATSAPP</small>
+  </div>
+
+</div>
+
+    <div class="form-group">
+      <label for="especificaciones">📒 Especificaciones:</label>
+      <textarea id="especificaciones" name="especificaciones" placeholder="Ej: sin cebolla, sin salsas..." rows="3"></textarea>
+    </div>
+
+  </section>
+
+  <!--TOTAL Y BOTON-->
+  <section class="menu-section">
+    <h2>💸 Total: <span id="total">$0</span></h2>
+    <input type="hidden" name="totalPedido" id="totalPedido">
+    
+    <div class="form-group">
+<label class="check-datos">
+<input type="checkbox" id="confirmPedido">
+Autorizo el tratamiento de mis datos para gestionar este pedido.
+</label>
+</div>
+
+    <button type="submit" class="btn">📲 Enviar Pedido</button>
+  </section>
+
+    </form>
+    <script src="scrip.js"></script>
+
+    </body>
+    </html>
